@@ -101,13 +101,55 @@ message Person {
 
 ## Default values for fields
 
-every field has default value (proto 3)
-bool false
-number 0
-string empty string
-bytes empty bytes
-enum first value
-repeated empty list
+* every field has default value (proto 3)
+
+* bool false
+
+* number 0
+
+* string empty string
+
+* bytes empty bytes
+
+* enum first value
+
+* repeated empty list
 
 No concept of required/optional fields in proto 3
 
+## Enum
+
+Powerful concept in protocol buffers
+
+If you know all the values a field can take in advance, you can leverage the enum
+
+first item in enum must start by tag 0 (which default value)
+
+```proto
+syntax = "proto3";
+
+/* message to identify person
+ * across system */
+message Person {
+  // age
+  int32 age = 1;
+  string firstname = 2;
+  string lastname = 3; // last name
+  // jpg format
+  bytes picture = 4;
+  bool verified = 5;
+  float height = 6; // in cms
+
+  repeated string phone_number = 7; // list of phone numbers optional
+
+  // consider only three colors
+  enum EyeColor {
+    UNKNOWN_EYE_COLOR = 0;
+    EYE_GREEN = 1;
+    EYE_BLUE = 2;
+    EYE_BLACK = 3;
+  }
+
+  EyeColor eyecolor = 8;
+}
+```
