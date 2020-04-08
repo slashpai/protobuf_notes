@@ -26,3 +26,9 @@ protoc -I=<proto root folder> --python_out=<folder in which python code should b
 ```bash
 protoc -I proto --ruby_out ruby proto/*
 ```
+
+### example with javascript
+
+```bash
+protoc -I proto --js_out js proto/*  
+```
