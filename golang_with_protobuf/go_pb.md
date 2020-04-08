@@ -35,3 +35,6 @@ message Date {
 ```bash
 protoc -I src --go_out src src/simple/simple.proto
 ```
+
+Creates getter function, reset, protomessage, filedescriptor, xxxmarshal, xxxunmarshal, 
+
