@@ -172,6 +172,10 @@ message Date {
 
 * Packages will help all the different languages compile correcly from .proto files
 
+* precise naming convention
+
+* Have to use alongside imports
+
 // date package
 
 ```proto
