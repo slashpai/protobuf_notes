@@ -117,9 +117,6 @@ message Person {
 }
 ```
 
+## Protobuf Usage Example
 
-
-
-
-
-
+* [using_protobuf_in_code](using_protobuf_in_code/README.md)
